@@ -11,6 +11,7 @@ RM := rm -rf
 -include src/3-firmware/systick/subdir.mk
 -include src/3-firmware/subdir.mk
 -include src/2-aplicacion/subdir.mk
+-include src/1-modulos/I2C/subdir.mk
 -include src/1-modulos/12-USART/subdir.mk
 -include src/1-modulos/10-lcd/subdir.mk
 -include src/1-modulos/09-teclado/subdir.mk
@@ -23,6 +24,7 @@ RM := rm -rf
 -include src/1-modulos/04-EntradasDigitales/subdir.mk
 -include src/1-modulos/03-timer/subdir.mk
 -include src/1-modulos/02-gpio/subdir.mk
+-include subdir.mk
 ifneq ($(MAKECMDGOALS),clean)
 ifneq ($(strip $(C++_DEPS)),)
 -include $(C++_DEPS)
@@ -52,7 +54,7 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := UART
+BUILD_ARTIFACT_NAME := ReLED
 BUILD_ARTIFACT_EXTENSION := axf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
@@ -64,24 +66,24 @@ all:
 	+@$(MAKE) --no-print-directory main-build && $(MAKE) --no-print-directory post-build
 
 # Main-build Target
-main-build: UART.axf
+main-build: ReLED.axf
 
 # Tool invocations
-UART.axf: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
+ReLED.axf: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU C++ Linker'
-	arm-none-eabi-c++ -nostdlib -Xlinker -Map="UART.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T UART_Debug.ld -o "UART.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-c++ -nostdlib -Xlinker -Map="ReLED.map" -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T UART_Debug.ld -o "ReLED.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) UART.axf
+	-$(RM) ReLED.axf
 	-@echo ' '
 
 post-build:
 	-@echo 'Performing post-build steps'
-	-arm-none-eabi-size "UART.axf"; # arm-none-eabi-objcopy -v -O binary "UART.axf" "UART.bin" ; # checksum -p LPC845 -d "UART.bin";
+	-arm-none-eabi-size "ReLED.axf"; # arm-none-eabi-objcopy -v -O binary "ReLED.axf" "ReLED.bin" ; # checksum -p LPC845 -d "ReLED.bin";
 	-@echo ' '
 
 .PHONY: all clean dependents main-build post-build

@@ -1945,5 +1945,45 @@ typedef struct {
  * @}
  */ /* end of group SWM_Peripheral_Access_Layer */
 
+// Definicion de estructura I2C
+
+typedef struct {
+    __IO uint32_t CFG;
+    __IO uint32_t STAT;
+    __IO uint32_t INTENSET;
+    __O  uint32_t INTENCLR;
+    __IO uint32_t TIMEOUT;
+    __IO uint32_t CLKDIV;
+    __I  uint32_t INTSTAT;
+    uint32_t RESERVED_0;
+    __IO uint32_t MSTCTL;
+    __IO uint32_t MSTTIME;
+    __IO uint32_t MSTDAT;
+    uint32_t RESERVED_1[6];
+    __IO uint32_t SLVCTL;
+    __IO uint32_t SLVDAT;
+    __IO uint32_t SLVADR0;
+    __IO uint32_t SLVADR1;
+    __IO uint32_t SLVADR2;
+    __IO uint32_t SLVADR3;
+    __IO uint32_t SLVQUAL0;
+    uint32_t RESERVED_2[10];
+    __I  uint32_t MONRXDAT;
+
+} I2C_Type;
+
+// Definiciones para cada instancia de I2C
+#define I2C0_BASE_ADDR (0x40050000UL)
+#define I2C1_BASE_ADDR (0x40054000UL)
+#define I2C2_BASE_ADDR (0x40030000UL)
+#define I2C3_BASE_ADDR (0x40034000UL)
+
+#define I2C0 ((I2C_Type *) I2C0_BASE_ADDR)
+#define I2C1 ((I2C_Type *) I2C1_BASE_ADDR)
+#define I2C2 ((I2C_Type *) I2C2_BASE_ADDR)
+#define I2C3 ((I2C_Type *) I2C3_BASE_ADDR)
+
+
+
 
 #endif /* LPC845_H_ */
