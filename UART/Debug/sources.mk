@@ -24,7 +24,6 @@ OBJS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-. \
 src/1-modulos/02-gpio \
 src/1-modulos/03-timer \
 src/1-modulos/04-EntradasDigitales \
@@ -37,7 +36,7 @@ src/1-modulos/08-display_de_segmentos/09C-display \
 src/1-modulos/09-teclado \
 src/1-modulos/10-lcd \
 src/1-modulos/12-USART \
-src/1-modulos/I2C \
+src/1-modulos/13-I2C \
 src/2-aplicacion \
 src/3-firmware \
 src/3-firmware/systick \

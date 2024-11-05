@@ -11,7 +11,7 @@ RM := rm -rf
 -include src/3-firmware/systick/subdir.mk
 -include src/3-firmware/subdir.mk
 -include src/2-aplicacion/subdir.mk
--include src/1-modulos/I2C/subdir.mk
+-include src/1-modulos/13-I2C/subdir.mk
 -include src/1-modulos/12-USART/subdir.mk
 -include src/1-modulos/10-lcd/subdir.mk
 -include src/1-modulos/09-teclado/subdir.mk
@@ -24,7 +24,6 @@ RM := rm -rf
 -include src/1-modulos/04-EntradasDigitales/subdir.mk
 -include src/1-modulos/03-timer/subdir.mk
 -include src/1-modulos/02-gpio/subdir.mk
--include subdir.mk
 ifneq ($(MAKECMDGOALS),clean)
 ifneq ($(strip $(C++_DEPS)),)
 -include $(C++_DEPS)
