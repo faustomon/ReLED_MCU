@@ -1,0 +1,4 @@
+../src/1-modulos/06-PerifericosTemporizados/perifericotemporizado.cpp:42:1:PerifericoTemporizado::PerifericoTemporizado()	16	static
+../src/1-modulos/06-PerifericosTemporizados/perifericotemporizado.cpp:46:1:PerifericoTemporizado::~PerifericoTemporizado()	16	static
+../src/1-modulos/06-PerifericosTemporizados/perifericotemporizado.cpp:46:1:virtual PerifericoTemporizado::~PerifericoTemporizado()	16	static
+../src/1-modulos/06-PerifericosTemporizados/perifericotemporizado.cpp:49:6:void PerifericoTemporizado::InstalarPerifericoTemporizado(PerifericoTemporizado*)	16	static

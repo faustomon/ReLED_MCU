@@ -1,0 +1,9 @@
+../src/1-modulos/07-leds/Led.cpp:10:1:Led::Led(uint8_t, void (*)(uint8_t, led_t), uint32_t)	32	static
+../src/1-modulos/07-leds/Led.cpp:25:6:void Led::On()	16	static
+../src/1-modulos/07-leds/Led.cpp:32:6:void Led::Off()	16	static
+../src/1-modulos/07-leds/Led.cpp:39:6:void Led::Blink()	16	static
+../src/1-modulos/07-leds/Led.cpp:47:6:void Led::SemiPeriodo(uint32_t)	16	static
+../src/1-modulos/07-leds/Led.cpp:53:6:Led& Led::operator=(led_t)	16	static
+../src/1-modulos/07-leds/Led.cpp:70:6:virtual void Led::HandlerDelPeriferico()	16	static
+../src/1-modulos/07-leds/Led.cpp:96:1:Led::~Led()	16	static
+../src/1-modulos/07-leds/Led.cpp:96:1:virtual Led::~Led()	16	static

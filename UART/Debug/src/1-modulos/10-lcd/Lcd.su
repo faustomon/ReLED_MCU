@@ -1,0 +1,7 @@
+../src/1-modulos/10-lcd/Lcd.cpp:11:1:Lcd::~Lcd()	16	static
+../src/1-modulos/10-lcd/Lcd.cpp:11:1:virtual Lcd::~Lcd()	16	static
+../src/1-modulos/10-lcd/Lcd.cpp:15:6:void Lcd::Set(const char*, uint8_t, uint8_t)	40	static
+../src/1-modulos/10-lcd/Lcd.cpp:31:1:Lcd::Lcd(Gpio**)	32	static
+../src/1-modulos/10-lcd/Lcd.cpp:95:8:int8_t Lcd::Push(uint8_t, uint8_t)	16	static
+../src/1-modulos/10-lcd/Lcd.cpp:116:9:int16_t Lcd::Pop()	32	static
+../src/1-modulos/10-lcd/Lcd.cpp:134:6:virtual void Lcd::HandlerDelPeriferico()	32	static
