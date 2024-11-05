@@ -1,0 +1,48 @@
+# Archivos generados por el IDE
+*.bin
+*.elf
+*.hex
+*.map
+*.o
+*.d
+*.lst
+*.a
+*.s
+
+# Directorios de compilación
+build/
+Debug/
+Release/
+Debug/*.*
+Release/*.*
+
+# Archivos de configuración de IDE
+*.launch
+*.cproject
+*.project
+*.settings/
+
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+*.bak
+*.swp
+*.swo
+
+# Archivos de usuario y configuración de IDE
+*.user
+*.prefs
+*.zip
+*.rar
+*.tar.gz
+
+# Archivos específicos de Mac
+.DS_Store
+
+# Archivos de Windows
+Thumbs.db
+ehthumbs.db
+
+# Archivos de Linux
+*~
