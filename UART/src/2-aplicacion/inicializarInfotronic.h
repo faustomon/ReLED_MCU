@@ -30,6 +30,7 @@
 #include "display7Segmentos.h"
 #include "Teclado.h"
 #include "Lcd.h"
+#include <1-modulos/13-I2C/I2C.h>
 
 /***********************************************************************************************************************************
  *** DEFINES GLOBALES

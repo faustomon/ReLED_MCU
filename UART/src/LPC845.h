@@ -1959,7 +1959,7 @@ typedef struct {
     __IO uint32_t MSTCTL;
     __IO uint32_t MSTTIME;
     __IO uint32_t MSTDAT;
-    uint32_t RESERVED_1[6];
+    uint32_t RESERVED_1[5];
     __IO uint32_t SLVCTL;
     __IO uint32_t SLVDAT;
     __IO uint32_t SLVADR0;
@@ -1967,7 +1967,7 @@ typedef struct {
     __IO uint32_t SLVADR2;
     __IO uint32_t SLVADR3;
     __IO uint32_t SLVQUAL0;
-    uint32_t RESERVED_2[10];
+    uint32_t RESERVED_2[9];
     __I  uint32_t MONRXDAT;
 
 } I2C_Type;

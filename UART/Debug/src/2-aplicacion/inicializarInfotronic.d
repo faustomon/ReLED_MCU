@@ -30,6 +30,8 @@ src/2-aplicacion/inicializarInfotronic.o \
  C:\Users\faust\Documents\MCUXpressoIDE_11.9.1_2170\workspace\uart.zip_expanded\UART\src/1-modulos/08-display_de_segmentos/09C-display/gruposdedigitos.h \
  C:\Users\faust\Documents\MCUXpressoIDE_11.9.1_2170\workspace\uart.zip_expanded\UART\src\1-modulos\09-teclado/Teclado.h \
  C:\Users\faust\Documents\MCUXpressoIDE_11.9.1_2170\workspace\uart.zip_expanded\UART\src\1-modulos\10-lcd/Lcd.h \
+ C:\Users\faust\Documents\MCUXpressoIDE_11.9.1_2170\workspace\uart.zip_expanded\UART\src/1-modulos/13-I2C/I2C.h \
+ C:\Users\faust\Documents\MCUXpressoIDE_11.9.1_2170\workspace\uart.zip_expanded\UART\src\2-aplicacion/inicializarInfotronic.h \
  ../src/2-aplicacion/aplicacion.h
 ../src/2-aplicacion/inicializarInfotronic.h:
 C:\Users\faust\Documents\MCUXpressoIDE_11.9.1_2170\workspace\uart.zip_expanded\UART\src\1-modulos\12-USART/Uart.h:
@@ -60,4 +62,6 @@ C:\Users\faust\Documents\MCUXpressoIDE_11.9.1_2170\workspace\uart.zip_expanded\U
 C:\Users\faust\Documents\MCUXpressoIDE_11.9.1_2170\workspace\uart.zip_expanded\UART\src/1-modulos/08-display_de_segmentos/09C-display/gruposdedigitos.h:
 C:\Users\faust\Documents\MCUXpressoIDE_11.9.1_2170\workspace\uart.zip_expanded\UART\src\1-modulos\09-teclado/Teclado.h:
 C:\Users\faust\Documents\MCUXpressoIDE_11.9.1_2170\workspace\uart.zip_expanded\UART\src\1-modulos\10-lcd/Lcd.h:
+C:\Users\faust\Documents\MCUXpressoIDE_11.9.1_2170\workspace\uart.zip_expanded\UART\src/1-modulos/13-I2C/I2C.h:
+C:\Users\faust\Documents\MCUXpressoIDE_11.9.1_2170\workspace\uart.zip_expanded\UART\src\2-aplicacion/inicializarInfotronic.h:
 ../src/2-aplicacion/aplicacion.h:

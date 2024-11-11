@@ -7,45 +7,52 @@
 */
 #include "aplicacion.h"
 #include "inicializarInfotronic.h"
+#include "1-modulos/13-I2C/I2C.h"
 
-int main ( void )
+int main(void)
 {
-	uint8_t tecla,inx;
-	char aux[20];
-	char aux1[20];
+    InicializarInfotronic();
 
-	InicializarInfotronic ( ) ;
+    // Mostrar texto de bienvenida
+    LCD.Set("    MIMIUXXX    ", 0, 0);
+    LCD.Set("   FAUSTOXXXX   ", 1, 0);
 
-	g_Display.SetDisplay(123, Display7Segmentos::DSP0);
-	g_Display.SetDisplay(456, Display7Segmentos::DSP1);
+    // Crear objetos para I2C
+    I2C i2c0(0);  // Objeto I2C para maestro (I2C0)
+    I2C i2c1(1);  // Objeto I2C para esclavo (I2C1)
 
-	LCD.Set("   Hola Mundo   ", 0, 0 );
-	LCD.Set("                ", 1, 0 );
+    // Inicializar I2C
+    i2c0.init();  // Inicializa I2C0 como maestro
+    i2c1.init();  // Inicializa I2C1 como esclavo
 
-	while ( 1 )
-	{
-		tecla = g_Teclado.GetKey();
+    uint8_t dataToSend[] = {0x01, 0x02, 0x03};
+    uint8_t receivedData[3];
 
-		if ( (inx = uart0.Message(aux1, 8)) )
-		{
-			aux1[inx] = '\0';
-			LCD.Set((const char*) aux1, 1, 0 );
-		}
-		if ( tecla != NO_KEY)
-		{
-			g_Display.SetDisplay(tecla, Display7Segmentos::DSP0);
-			aux[2] = 'C';
-			aux[3] = 'H';
-			aux[4] = 'A';
-			aux[5] = 'U';
-			aux[0] = '\xd';
-			aux[1] = '\xa';
-			aux[6] = '\0';
+    // Enviar datos desde el maestro
+    i2c0.sendData(dataToSend, sizeof(dataToSend));
 
-			uart0.Transmit(aux);
-		}
+    // Recibir datos en el esclavo
+    i2c1.receiveData(receivedData, sizeof(receivedData));
 
-	}
+    // Verificar si los datos enviados son los mismos que los recibidos
+    bool success = true;
+    for (int i = 0; i < sizeof(dataToSend); i++) {
+        if (dataToSend[i] != receivedData[i]) {
+            success = false;
+            break;
+        }
+    }
 
+    // Mostrar el resultado en la pantalla LCD
+    if (success) {
+        LCD.Set("   CONEXION OK   ", 0, 0);
+    } else {
+        LCD.Set("   ERROR COMUNICACION   ", 0, 0);
+    }
 
+    while (1) {
+        // Aquí puedes añadir cualquier otra lógica si es necesario
+    }
+
+    return 0;
 }

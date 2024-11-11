@@ -5,11 +5,11 @@
  * Generated linker script file for LPC845
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v11.9.1 [Build 2170] [2024-04-19] on Nov 5, 2024, 6:09:17 PM
+ * MCUXpresso IDE v11.9.1 [Build 2170] [2024-04-19] on Nov 11, 2024, 7:29:21 PM
  */
 
-INCLUDE "UART_Debug_library.ld"
-INCLUDE "UART_Debug_memory.ld"
+INCLUDE "ReLED_Debug_library.ld"
+INCLUDE "ReLED_Debug_memory.ld"
 
 ENTRY(ResetISR)
 
